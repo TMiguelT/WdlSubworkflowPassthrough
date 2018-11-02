@@ -12,5 +12,13 @@ task t {
 }
 
 workflow greet {
-    call t
+    input {
+        String greeting
+        String name
+    }
+    call t {
+        input:
+            greeting=greeting,
+            name=name
+    }
 }
