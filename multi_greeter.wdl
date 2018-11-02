@@ -1,16 +1,16 @@
 version 1.0
 
-import 'b.wdl' as sub
+import 'greeter.wdl' as greeter
 
-workflow w {
+workflow multi_greeter {
     input {
         Array[String] names
     }
 
     scatter (name in names){
-        call sub.b {
+        call greeter.greet {
             input:
-                second = name
+                name = name
         }
     }
 }
