@@ -1,5 +1,5 @@
 {
   "multi_greeter.names": ["Ann", "Brian"],
-  "multi_greeter.greeter.greeting": "Hello"
+  "multi_greeter.greet.t.greeting": "Hello"
 }
 
